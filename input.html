@@ -1,0 +1,98 @@
+<input/><br/>
+<input value="검색"><br/>
+<input type="text" value="검색"/> input의 기본 설정
+<br/>
+<input type="number" value="123"/> 숫자만 입력 가능
+<br/>
+<input type="password" value="비밀번호"> 안의 내용이 making처리됨
+<br/>
+<input type="tel" value="다이얼을 띄워줌"> 전화번호를 입력할 수 있는 다이얼키패드 띄워줌; 웹사이트가 아니라 전용 앱을 사용하는 느낌 제공
+<br/>
+<input type="search" value="엔터 등의 특수문자가 제거"> 검색창에 부적절한 엔터 등의 특수문자가 제거됨 + 검색어 입력시 우측에 X표시(내용물 삭제)
+<br/>
+<input type="email" value="이메일"> 이메일의 유효성을 검증하는 기능 작동; @가 있는지, url의 뒷 모양이 그럴싸한지 등
+<br/>_________________________________ 이 기능들은 입력받은 자료를 제출할 때에만 의미가 있음
+<br/>
+<input type="uel" value="url"> 입력받은 자료가 url 형태인지 검증하기 위한 기능이 제공됨
+<br/> 이메일과 마찬가지로, 잘못된 정보가 입력된 것인지 혹은 아직 정보가 입력이 덜 된 것인지 검증할 방법이 없어서 잘 사용되지 않음
+
+<input type="button" value="버튼"> 버튼 태그와 유사한 버튼을 화면에 표시할 수 있음
+<br/>
+<input type="submit" value="버튼"> 양식을 제출할 때 사용할 수 있는 "제출" 버튼을 만들 수 있음//제출 버튼은 form 태그와 함께 사용됨//누르는 순간 다른 컴퓨터로 데이터가 전송됨
+<br/>
+<button>버튼</button> 겉보기에는 위 3가지가 차이가 없을지라도, 거의 모든 경우에 버튼태그가 상위호환 기능임.
+<br/>_______CSS로 꾸미기도 쉽고, JS코드를 연결하여 여러 기능을 부여하기에도 좋음
+<br/>
+<input type="file"/><br/>
+이때 파일의 확장자가 ALL File(*.*)로 지정됨
+<br/> 우리는 특정 파일의 종류를 제한하는 기능이 필요함
+<br/>
+<input type="file" accept="image/*">
+<br/>
+<input type="file" accept="audio/*">
+<br/>
+<input type="file" accept="video/*">
+<br/>
+<input type="file" accept=".jpg, .png, .pdf"/>
+<br/>
+<input type="color"/>
+<br/>
+<input type="checkbox"/>
+<br/>
+<input type="checkbox" checked/>당신은 매력적인가요?
+<br/>
+<p>
+    <input type="radio" name="radioa1" checked>한식
+    <input type="radio" name="radio1">중식
+    <input type="radio" name="radio1">일식
+    <input type="radio" name="radio1">양식
+</p>
+<p>
+    <input type="radio" name="radio2">뜨거운 것
+    <input type="radio" name="radio2">차가운 것
+</p>
+<p>
+    <input type="radio" name="radio3">매운 것
+    <input type="radio" name="radio3">안 매운 것
+</p>
+radio태그는 name이 동일한 대상들을 하나의 그룹으로 인식, 하나의 그룹 안에서 반드시 하나의 선택지만 선택되도록 세팅됨
+name을 삭제하면 각 선택지가 모두 별개의 그룹으로 인식되어, 한 개의 선택지를 선택하더라도 다른 선택지가 영향을 받지 않음
+<br/>
+<input 
+    type="range" min="0" max="1000"
+    />
+<br/>
+<input 
+    type="range" min="0" max="1000" step="10"
+    />
+<br/>
+<input
+    type="range" min="0" max="1000" step="10" value="10"
+    />
+<br/>
+min, max를 통해 최솟값과 최대값을 지정<br/>
+step을 통해 슬라이더 한 칸당 실제로 바뀌는 값의 크기(간격) 지정<br/>
+value 지정을 통해 초깃값 세팅<br/>
+*위의 코딩은 코딩하는 사람들이 좋아하는 형태로 해봄<br/>
+*그들은 코드가 좌우로 길어가는 것을 싫어함<br/>
+*위아래로 길게 늘리고 가독성을 늘리는 것을 좋아함<br/>
+<p>
+    <input type="date"/>
+</p>
+<p> 
+    <input type="month">
+</p>
+<p>
+    <input type="week"/>
+</p>
+<p>
+    <input type="time"/>
+</p>
+<p>
+    <input type="datetime-local"/>
+</p>
+*날짜와 시간 입력 태그는 자주 사용x b/c Js활용시 자동으로 확인 가능<br/>
+하지만 사용자로부터 입력이 필요할 때 사용 + input태그 활용 시 시간 절약 가능<br/>
+<br/>
+input태그로 입력받은 데이터를 -> 브라우저가 정보를 정돈하고 -> PC에게 명령,
+PC는 -> 인터넷 회선(기지국)을 통해 데이터가 -> 서버에게 전달되도록 함<br/>
