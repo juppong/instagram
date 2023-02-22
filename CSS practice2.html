@@ -1,0 +1,130 @@
+<style>
+    div{
+        font-size: 50px;
+        font-weight: 750;
+    }
+</style>
+<br/><br/>
+<div>
+    <영역을 표시하는 스타일>
+</div>
+<p style="border: dotted">
+    dotted
+</p>
+<p style="border: dashed">
+    dashed
+</p>
+<p style="border: solid" >
+    solid
+</p>
+<p style="border: double">
+    double
+</p>
+<p style="border: inset">
+    inset
+</p>
+<p style="border: outset">
+    outset
+</p>
+
+<style>
+    #first{
+        border:solid;
+        border-color:yellow;
+        border-width:1px;
+    }
+    #second{
+        border: solid;
+        border-color:green;
+        border-width: 3px;
+    }
+    #third{
+        border: solid;
+        border-color: skyblue;
+        border-top-width: 1px;
+        border-left-width: 2px;
+        border-bottom-width:4px;
+        border-right-width: 7px;
+    }
+    #color_differ{
+        border: solid;
+        border-left-color: yellow;
+        border-top-color: red;
+        border-right-color: purple;
+        border-bottom-color: green;
+    }
+    #short{
+        border:solid blue 5px;
+    }
+    #radius{
+        border: solid red 10px;
+        border-radius: 30px;
+    }
+    #img_radius{
+        width:200px;
+        height:200px;
+        border:solid  green 5px;
+        border-radius: 105px; 
+        /* border-radius:50%;  <- 위의 코드와 같은 코드임 */
+    }
+    #img_radius2 img{
+        width:200px;
+        height:200px;
+        border:solid red 5px;
+        border-radius: 40px 10px 80px 50%;
+        <- 각각 모서리에 적용할 반지름을 하나씩 입력
+        + 좌측 상단 모서리부터 시계방향으로 곡률 적용
+    }
+    .girl{
+        width:200px;
+        height:200px;
+        border:solid blue 5px;
+        border-radius:105px;
+    }
+</style>
+<p id="first">1px</p>
+<p id="second">3px</p>
+<p id="third">width difference</p>
+<p id="color_differ">color_differ</p>
+<p id="short">short</p>
+<p id="radius">radius</p>
+<p id="img_radius">
+    <img src="image/thumbnail2.jpg" width="200px" height="200px">
+</p> 
+<-- 작동이 잘 안되는 이유를 복습해보자 -->
+<p id="img_radius2">
+    <img src="image/thumbnail3.jpg" width="200px" height="200px">
+</p>
+
+<img class="girl" src="https://pbs.twimg.com/media/FWBgF3BakAA2jkf.jpg:large" width="32%"/>
+<br/>이미지 태그에 직접 or 클래스 적용 후 border 스타일을 적용해야 사진의 크기도 그에 맞춰서 잘려짐
+<br/>만약 그 부모나 조상 태그에 아이디를 붙여서 사용하게 되면 그냥 border만 개별적으로 생김
+<br/>뭐지.. 상위 태그에 아이디가 있어도 복합 선택자를 이용하니 적용이 되었음...
+<br/>아마도 복합 선택자를 사용하면 마지막에 지정한 특정한 태그를 변동시키는 반면,
+<br/>그냥 부모 태그(혹은 조상)의 아이디나 클래스를 사용하면 부모 태그가 영향을 받는 것이고
+<br/>자식 태그는 그 영향의 범주에는 들어있으나, 직접적인 영향을 받는 것은 아닌 것으로 생각됨. 
+<br>
+<style>
+    p{
+        background-color:yellow ;
+    }
+    #imgg{
+        background-image: url("image/thumbnail4.jpg");
+        background-position-y: -200px;
+        background-position-x: 200px;
+    }
+</style>
+<p>
+    배경을 표시합니다
+</p>
+<p id=imgg style="color:white; height: 30vh;">
+    배경을 표시합니다
+</p> 
+
+<style>
+    .first{
+        visibility: hidden;
+    }  
+</style>
+<img class="first" src="image/profile2.png">
+<img class="second" src="image/profile.jpeg">

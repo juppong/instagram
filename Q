@@ -1,0 +1,8 @@
+1. 왜 파일 내부에 있는 사진이나 코드들이 연결이 안되는지
+ex)
+<img src="image/profile2.png" height="50"/> 왜 안되는 거지 ㅅㅂ?
+<link href="style.css" rel="stylesheet">
+
+2. git commit 이후 git push origin "땡땡"에서
+    master가 아니라 main을 입력하니까 에러가 뜬 이유는?..
+3. github의 사용법 및 팁
